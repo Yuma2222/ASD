@@ -2,10 +2,10 @@ import sys
 import time
 
 from arrayProvider import randomArr, sortedArr, reversedArr, randomArr500K
-from cocktailShakerSort import _cocktailSort
-from heapsort import _heapSort
-from mergeSort import _mergeSort
-from quicksort import _quicksort
+from sorting_algorithms.cocktailShakerSort import _cocktailSort
+from sorting_algorithms.heapsort import _heapSort
+from sorting_algorithms.mergeSort import _mergeSort
+from sorting_algorithms.quicksort import _quicksort
 
 
 def quicksortTest(array, name):
@@ -41,8 +41,12 @@ def testSortsFor(array, name):
     print("")
 
 
-sys.setrecursionlimit(999999999)
-testSortsFor(randomArr, "Random")
-testSortsFor(sortedArr, "Sorted")
-testSortsFor(reversedArr, "Reversed")
-testSortsFor(randomArr500K, "Random500k")
+if __name__ == '__main__':
+    try:
+        sys.setrecursionlimit(999999999)
+        testSortsFor(randomArr, "Random")
+        testSortsFor(sortedArr, "Sorted")
+        testSortsFor(reversedArr, "Reversed")
+        testSortsFor(randomArr500K, "Random500k")
+    except Exception as e:
+        print("Error during execution, exception: ", e)

@@ -15,8 +15,8 @@ sortedArr = []
 
 randomArr500K = []
 
-inputFileReader(open("100kRandom-array.txt", "r"), randomArr)
-inputFileReader(open("100kReversed-array.txt", "r"), reversedArr)
-inputFileReader(open("100kSorted-array.txt", "r"), sortedArr)
+inputFileReader(open("data_source/100kRandom-array.txt", "r"), randomArr)
+inputFileReader(open("data_source/100kReversed-array.txt", "r"), reversedArr)
+inputFileReader(open("data_source/100kSorted-array.txt", "r"), sortedArr)
 
-inputFileReader(open("500kRandom-array.txt", "r"), randomArr500K)
+inputFileReader(open("data_source/500kRandom-array.txt", "r"), randomArr500K)
